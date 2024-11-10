@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darmendar Saini | iOS Developer</title>
+    <title>Dharmendra Saini | iOS Developer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,27 +16,41 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
-            <a href="#" class="resume-button">Resume ⬇</a>
         </nav>
     </header>
+
+    <div class="mobile-menu-button" onclick="toggleSidebar()">☰ Menu</div>
+        <div class="sidebar" id="mobileSidebar">
+            <a href="#hero">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+
 
     <main>
         <!-- Hero Section -->
         <section id="hero">
-            <h1>Hello, I’m <strong>Darmendar Saini</strong></h1>
+            <h1 class="cool-animation">Hello , I am Dharmendar Saini</h1>
             <p>Experienced iOS Developer Based in India.</p>
+            <div class="hero-buttons">
+                <div class="mobile-menu-button" onclick="toggleSidebar()">☰ Menu</div>
+                <a href="resume.pdf" class="resume-button">Resume ⬇</a>
+            </div>
             <div class="social-icons">
-                <a href="mailto:email@example.com">Email</a>
-                <a href="https://github.com/username">GitHub</a>
-                <a href="https://twitter.com/username">Twitter</a>
+                <a href="dsainidotcom@protonmail.com">Email</a>
+                <a href="https://github.com/dsainidotcom">GitHub</a>
+                <a href="https://twitter.com/dsainidotcom">Twitter</a>
             </div>
         </section>
+        
 
         <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
             <p>
-                I’m Darmendar Saini, an iOS developer with a passion for building user-centric mobile applications.
+                I’m Dharmendra Saini, an iOS developer with a passion for building user-centric mobile applications.
                 Despite my background in management within a government bank, I transitioned into iOS development driven by my love for technology.
                 My journey in software development began as a self-taught developer, and over the years, I have honed my skills through hands-on experience and continuous learning.
             </p>
@@ -105,9 +119,9 @@
 
     <footer id="contact">
         <h2>Contact Me</h2>
-        <p>Email: email@example.com</p>
-        <p>GitHub: <a href="https://github.com/username">github.com/username</a></p>
-        <p>Twitter: <a href="https://twitter.com/username">twitter.com/username</a></p>
+        <p>Email : <a href="dsainidotcom@protonmail.com">Email.com/dsainidotcom</a></p>
+        <p>GitHub : <a href="https://github.com/dsainidotcom">github.com/dsainidotcom</a></p>
+        <p>Twitter : <a href="https://twitter.com/dsainidotcom">twitter.com/dsainidotcom</a></p>
     </footer>
 
     <script src="script.js"></script>
