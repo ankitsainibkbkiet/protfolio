@@ -226,19 +226,9 @@ footer a {
     position: relative; /* To position the line below the text */
     width: 0;
     animation: typing 4s steps(70) 1s forwards, blink 0.75s step-end infinite;
-  }
-  
-  .cool-animation {
-    font-size: 36px;
-    white-space: nowrap;
-    display: inline-block;
-    overflow: hidden;
-    position: relative; /* To position the line below the text */
-    width: 0;
-    animation: typing 4s steps(70) 1s forwards, blink 0.75s step-end infinite;
-  }
-  
-  .cool-animation::after {
+}
+
+.cool-animation::after {
     content: ''; 
     position: absolute;
     bottom: 0; /* Position the line just below the text */
@@ -248,53 +238,58 @@ footer a {
     width: 0; /* Initially, the line has no width */
     animation: drawLine 2s steps(70) 1s forwards; /* Animation to draw the line */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6); /* Glowing effect */
-  }
-  
-  @media (max-width: 995px) {
+}
+
+@media (max-width: 995px) {
     .cool-animation {
-      animation: fadeInText 1.5s ease-out forwards; /* Only fade-in animation for small screens */
-      width: 100%;
-      border-right: none;
-      white-space: normal;
+        animation: fadeInText 1.5s ease-out forwards; /* Only fade-in animation for small screens */
+        width: 100%;
+        border-right: none;
+        white-space: normal;
     }
-  
+
+    .cool-animation::after {
+        animation: drawLine 2s steps(70) 1s forwards; /* Keep the line animation for small screens */
+    }
+
     #hero h1 {
-      font-size: 3em;
-      font-weight: 750;
-      line-height: 1.2;
+        font-size: 3em;
+        font-weight: 750;
+        line-height: 1.2;
     }
-  }
-  
-  @keyframes typing {
+
+    @keyframes drawLine {
+        from {
+            width: 0; /* Line starts with 0 width */
+        }
+        to {
+            width: 100%; /* Line grows to match the text */
+        }
+    }
+    
+    @keyframes fadeInText {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+}
+
+@keyframes typing {
     from {
-      width: 0;
+        width: 0;
     }
     to {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
-  @keyframes blink {
+}
+
+@keyframes blink {
     50% {
-      border-color: transparent;
+        border-color: transparent;
     }
-  }
-  
-  @keyframes drawLine {
-    from {
-      width: 0; /* Line starts with 0 width */
-    }
-    to {
-      width: 100%; /* Line grows to match the text */
-    }
-  }
-  
-  @keyframes fadeInText {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+}
+
