@@ -19,15 +19,23 @@
         </nav>
     </header>
 
-    <div class="mobile-menu-button" onclick="toggleSidebar()">☰ Menu</div>
-        <div class="sidebar" id="mobileSidebar">
-            <a href="#hero">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
 
+    <div class="menu" onclick="toggleMenu()">
+        <div id="menu-icon" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="menu-items" class="menu-hidden">
+        <!-- Header features go here -->
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      
 
     <main>
         <!-- Hero Section -->
@@ -35,11 +43,10 @@
             <h1 class="cool-animation">Hello , I am Dharmendra Saini</h1>
             <p>Experienced iOS Developer Based in India.</p>
             <div class="hero-buttons">
-                <div class="mobile-menu-button" onclick="toggleSidebar()">☰ Menu</div>
                 <a href="resume.pdf" class="resume-button">Resume ⬇</a>
             </div>
             <div class="social-icons">
-                <a href="dsainidotcom@protonmail.com">Email</a>
+                <a href="mailto:dsainidotcom@protonmail.com">Email</a>
                 <a href="https://github.com/dsainidotcom">GitHub</a>
                 <a href="https://twitter.com/dsainidotcom">Twitter</a>
             </div>
@@ -119,7 +126,7 @@
 
     <footer id="contact">
         <h2>Contact Me</h2>
-        <p>Email : <a href="dsainidotcom@protonmail.com">Email.com/dsainidotcom</a></p>
+        <p>Email : <a href="mailto:dsainidotcom@protonmail.com">Email.com/dsainidotcom</a></p>
         <p>GitHub : <a href="https://github.com/dsainidotcom">github.com/dsainidotcom</a></p>
         <p>Twitter : <a href="https://twitter.com/dsainidotcom">twitter.com/dsainidotcom</a></p>
     </footer>
