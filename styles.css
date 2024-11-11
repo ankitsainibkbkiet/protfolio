@@ -152,19 +152,7 @@ footer a {
 }
 
 
-/* Mobile Menu Button */
-.mobile-menu-button {
-    display: none;
-    position: fixed;
-    top: 1em;
-    right: 1em;
-    background-color: #0073e6;
-    color: #fff;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1000;
-}
+
 
 /* Sidebar Menu Styling */
 .sidebar {
@@ -202,20 +190,6 @@ footer a {
     transform: translateX(0);
 }
 
-/* Show Mobile Menu Button on Small Screens */
-@media (max-width: 600px) {
-    .mobile-menu-button {
-        display: block;
-    }
-
-    header {
-        display: none; /* Hides the header */
-    }    
-
-    nav ul {
-        display: none; /* Hide the main nav menu on small screens */
-    }
-}
 
 
 .cool-animation {
@@ -293,3 +267,92 @@ footer a {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    header{
+      display: none; /* Show on small screens */
+    }
+  }
+  
+/* Positioning the menu icon in the top-right corner */
+.menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 10;
+    display: none;
+  }
+  
+  .hamburger {
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .hamburger span {
+    display: block;
+    height: 3px;
+    background-color: blue;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Style for the cross icon when active */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Style for the hidden menu items */
+  .menu-hidden {
+    display: none;
+  }
+  
+  /* Style for the visible menu items */
+  .menu-shown {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #000000; /* Black background */
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    z-index: 9;
+  }
+  
+  #menu-items a {
+    padding: 10px 0;
+    color: white;
+    font-weight: bold; /* Increased font weight */
+    text-decoration: none;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    transition: background 0.2s ease;
+  }
+  
+  #menu-items a:hover {
+    background-color: #333333; /* Dark gray on hover */
+    border-radius: 5px;
+  }
+  
+  /* Media query to show the menu on small screens */
+  @media only screen and (max-width: 768px) {
+    .menu {
+      display: block; /* Show on small screens */
+    }
+  }
+  
