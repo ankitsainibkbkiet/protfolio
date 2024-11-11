@@ -124,7 +124,7 @@ h2 {
 }
 
 /* Experience and Projects Styling */
-.experience-card, .project-card {
+.experience-card, .project-card ,.skills-grid ,.aboutme {
     background-color: #fff;
     padding: 1.5em;
     border-radius: 10px;
@@ -133,7 +133,7 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience-card:hover, .project-card:hover {
+.experience-card:hover, .project-card:hover ,.skills-grid:hover , .aboutme:hover{
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -211,8 +211,7 @@ footer a {
     background-color: black; /* Line color */
     width: 0; /* Initially, the line has no width */
     animation: drawLine 2s steps(70) 1s forwards; /* Animation to draw the line */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6); /* Glowing effect */
-}
+ }
 
 @media (max-width: 995px) {
     .cool-animation {
